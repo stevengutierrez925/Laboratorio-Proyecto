@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Registrar Trabajador | Market Plus</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url("fondowestcol.jpg");
+    margin: 0;
+    min-height: 100vh;
+    background-size: 200% 200%;
+    animation: fondo 12s ease infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.logo {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    width: 120px;
+    z-index: 10;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+h2 {
+    margin-bottom: 18px;
+    color: #333;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.small-link {
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.small-link:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<img src="logomarketplus.png" alt="Market Plus" class="logo">
+
+<div class="card">
+    <h2>Registrar Trabajador</h2>
+
+    <form action="registro_trabajador.php" method="POST">
+        <label>Nombre</label>
+        <input type="text" name="nombre" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Contraseña</label>
+        <input type="password" name="password" required>
+
+        <button class="btn" type="submit">Registrar Trabajador</button>
+    </form>
+
+    <a class="small-link" href="panel_admin.php">← Volver al panel</a>
+</div>
+
+</body>
+</html>
